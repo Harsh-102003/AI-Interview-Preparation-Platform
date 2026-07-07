@@ -8,7 +8,8 @@ app.use(express.json())
 app.use(cookieParser())
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://interview-ai.vercel.app",
+  "https://ai-interview-preparation-platform-odew71biq.vercel.app",
+  
 ];
 
 app.use(cors({
