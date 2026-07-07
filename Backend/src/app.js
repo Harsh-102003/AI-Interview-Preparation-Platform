@@ -6,10 +6,15 @@ const app = express()
 
 app.use(express.json())
 app.use(cookieParser())
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://interview-ai.vercel.app",
+];
+
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
-}))
+  origin: allowedOrigins,
+  credentials: true,
+}));
 
 /* require all the routes here */
 const authRouter = require("./routes/auth.routes")
